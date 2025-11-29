@@ -273,5 +273,14 @@
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
         @endif
+        
+        <script>
+            // Redirect to login if not authenticated
+            @if(!auth()->check())
+                window.location.href = '{{ route('login') }}';
+            @else
+                window.location.href = '{{ auth()->user()->isAdmin() ? route('admin.dashboard') : route('dashboard') }}';
+            @endif
+        </script>
     </body>
 </html>
