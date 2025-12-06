@@ -36,9 +36,9 @@
                             </a>
                         @endif
                         <span class="text-gray-700 text-sm">{{ Auth::user()->name }}</span>
-                        <form method="POST" action="{{ route('logout') }}" class="inline">
+                        <form method="POST" action="{{ route('logout') }}" id="logout-form" class="inline">
                             @csrf
-                            <button type="submit" class="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium">
+                            <button type="button" onclick="showLogoutModal()" class="text-gray-700 hover:text-red-600 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
                                 Logout
                             </button>
                         </form>
@@ -86,6 +86,71 @@
 
         @yield('content')
     </main>
+
+    <!-- Logout Confirmation Modal -->
+    <div id="logoutModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full z-50" onclick="closeLogoutModal(event)">
+        <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-lg bg-white" onclick="event.stopPropagation()">
+            <div class="mt-3">
+                <!-- Icon -->
+                <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100">
+                    <svg class="h-6 w-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"></path>
+                    </svg>
+                </div>
+                
+                <!-- Title -->
+                <div class="mt-4 text-center">
+                    <h3 class="text-lg leading-6 font-medium text-gray-900">
+                        Konfirmasi Logout
+                    </h3>
+                    <div class="mt-2 px-7 py-3">
+                        <p class="text-sm text-gray-500">
+                            Apakah Anda yakin ingin keluar dari sistem? Anda perlu login kembali untuk mengakses aplikasi.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Buttons -->
+                <div class="flex gap-4 mt-6 px-4 pb-3">
+                    <button 
+                        onclick="closeLogoutModal()" 
+                        class="flex-1 px-4 py-2 bg-gray-100 text-gray-700 text-base font-medium rounded-md shadow-sm hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition-colors duration-200">
+                        Tidak
+                    </button>
+                    <button 
+                        onclick="confirmLogout()" 
+                        class="flex-1 px-4 py-2 bg-red-600 text-white text-base font-medium rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 transition-colors duration-200">
+                        Ya, Logout
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showLogoutModal() {
+            document.getElementById('logoutModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLogoutModal(event) {
+            if (!event || event.target === event.currentTarget) {
+                document.getElementById('logoutModal').classList.add('hidden');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        function confirmLogout() {
+            document.getElementById('logout-form').submit();
+        }
+
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeLogoutModal();
+            }
+        });
+    </script>
 </body>
 </html>
 
