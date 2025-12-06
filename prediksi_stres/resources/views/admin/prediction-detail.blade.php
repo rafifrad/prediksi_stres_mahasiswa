@@ -5,8 +5,8 @@
 @section('content')
 <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="mb-8">
-        <a href="{{ route('admin.predictions') }}" class="text-indigo-600 hover:text-indigo-800 mb-4 inline-block">
-            ← Kembali ke Daftar Prediksi
+        <a href="{{ route('admin.dashboard') }}" class="text-indigo-600 hover:text-indigo-800 mb-4 inline-block">
+            ← Kembali ke Dashboard Admin
         </a>
         <h1 class="text-3xl font-bold text-gray-900">Detail Prediksi</h1>
     </div>
