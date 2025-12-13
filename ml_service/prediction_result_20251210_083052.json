@@ -1,0 +1,76 @@
+{
+  "timestamp": "2025-12-10T08:30:52.164953",
+  "input_data": {
+    "Academic_Stress_Score": 3.0,
+    "Tekanan_Akademik": 4.0,
+    "Kesulitan_Akumulasi": 5.0,
+    "Stres_Tugas_Deadline": 5.0,
+    "Tekanan_Eksternal": 3.0,
+    "Kurang_Kendali": 2.0,
+    "Rasa_Tidak_Sanggup": 2.0,
+    "Stres_Pribadi": 4.0,
+    "Marah_Eksternal_Studi": 3.0,
+    "Stres_Perubahan_Akademik": 2.0,
+    "Tekanan_IPK": 2.0,
+    "Cemas_Karir": 5.0,
+    "Kebiasaan_Buruk": 4.0,
+    "Proses_Sesuai_Harapan": 3.0,
+    "Academic_Confidence_Score": 4.0
+  },
+  "prediction_result": {
+    "explanation": {
+      "feature_importance": {
+        "Academic_Confidence_Score": -0.130625,
+        "Academic_Stress_Score": 0.02062500000000001,
+        "Cemas_Karir": -0.04187500000000001,
+        "Kebiasaan_Buruk": 0.15,
+        "Kesulitan_Akumulasi": 0.17812500000000003,
+        "Kurang_Kendali": -0.0037500000000000103,
+        "Marah_Eksternal_Studi": 0.03374999999999998,
+        "Proses_Sesuai_Harapan": 0.021249999999999977,
+        "Rasa_Tidak_Sanggup": 0.07125000000000001,
+        "Stres_Perubahan_Akademik": 0.03937499999999999,
+        "Stres_Pribadi": 0.134375,
+        "Stres_Tugas_Deadline": -0.101875,
+        "Tekanan_Akademik": 0.12499999999999997,
+        "Tekanan_Eksternal": 0.16125,
+        "Tekanan_IPK": 0.22312500000000007
+      },
+      "top_factors": [
+        "Tekanan_IPK",
+        "Kesulitan_Akumulasi",
+        "Tekanan_Eksternal",
+        "Kebiasaan_Buruk",
+        "Stres_Pribadi"
+      ]
+    },
+    "input_data": {
+      "Academic_Confidence_Score": 4.0,
+      "Academic_Stress_Score": 3.0,
+      "Cemas_Karir": 5.0,
+      "Kebiasaan_Buruk": 4.0,
+      "Kesulitan_Akumulasi": 5.0,
+      "Kurang_Kendali": 2.0,
+      "Marah_Eksternal_Studi": 3.0,
+      "Proses_Sesuai_Harapan": 3.0,
+      "Rasa_Tidak_Sanggup": 2.0,
+      "Stres_Perubahan_Akademik": 2.0,
+      "Stres_Pribadi": 4.0,
+      "Stres_Tugas_Deadline": 5.0,
+      "Tekanan_Akademik": 4.0,
+      "Tekanan_Eksternal": 3.0,
+      "Tekanan_IPK": 2.0
+    },
+    "prediction": {
+      "class": 2,
+      "confidence": 48.21690203441426,
+      "label": "High",
+      "probabilities": {
+        "High": 48.21690203441426,
+        "Low": 8.724353681321121,
+        "Medium": 43.05874391173556
+      }
+    },
+    "status": "success"
+  }
+}

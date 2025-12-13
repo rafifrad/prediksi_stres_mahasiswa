@@ -1,0 +1,10 @@
+flask
+flask-cors
+numpy
+scikit-learn
+joblib
+shap
+pandas
+xgboost
+lightgbm
+catboost
