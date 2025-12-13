@@ -139,7 +139,7 @@
                                 <div class="flex flex-wrap gap-3">
                                     @for($i = 1; $i <= 5; $i++)
                                         <label class="flex items-center">
-                                            <input type="radio" name="academic_load" value="{{ $i }}" required class="sr-only" {{ old('academic_load', session('academic_load')) == $i ? 'checked' : '' }}>
+                                            <input type="radio" name="Tekanan_Akademik" value="{{ $i }}" required class="sr-only" {{ old('Tekanan_Akademik') == $i ? 'checked' : '' }}>
                                             <span class="option-label h-10 w-10 rounded-lg flex items-center justify-center cursor-pointer font-medium">
                                                 {{ $i }}
                                             </span>
@@ -147,8 +147,8 @@
                                     @endfor
                                     <div class="flex-1 flex items-center">
                                         <span class="ml-4 text-sm text-gray-500">
-                                            {{ old('academic_load', session('academic_load')) ? 'Anda memilih: ' . old('academic_load', session('academic_load')) : '' }}
-                                            @error('academic_load')
+                                            {{ old('Tekanan_Akademik') ? 'Anda memilih: ' . old('Tekanan_Akademik') : '' }}
+                                            @error('Tekanan_Akademik')
                                                 <span class="text-red-500 text-sm ml-2">{{ $message }}</span>
                                             @enderror
                                         </span>
@@ -170,7 +170,7 @@
                                 <div class="flex flex-wrap gap-3">
                                     @for($i = 1; $i <= 5; $i++)
                                         <label class="flex items-center">
-                                            <input type="radio" name="sleep_hours" value="{{ $i }}" required class="sr-only" {{ old('sleep_hours', session('sleep_hours')) == $i ? 'checked' : '' }}>
+                                            <input type="radio" name="Kesulitan_Akumulasi" value="{{ $i }}" required class="sr-only" {{ old('Kesulitan_Akumulasi') == $i ? 'checked' : '' }}>
                                             <span class="option-label h-10 w-10 rounded-lg flex items-center justify-center cursor-pointer font-medium">
                                                 {{ $i }}
                                             </span>
@@ -178,8 +178,8 @@
                                     @endfor
                                     <div class="flex-1 flex items-center">
                                         <span class="ml-4 text-sm text-gray-500">
-                                            {{ old('sleep_hours', session('sleep_hours')) ? 'Anda memilih: ' . old('sleep_hours', session('sleep_hours')) : '' }}
-                                            @error('sleep_hours')
+                                            {{ old('Kesulitan_Akumulasi') ? 'Anda memilih: ' . old('Kesulitan_Akumulasi') : '' }}
+                                            @error('Kesulitan_Akumulasi')
                                                 <span class="text-red-500 text-sm ml-2">{{ $message }}</span>
                                             @enderror
                                         </span>
@@ -201,7 +201,7 @@
                                 <div class="flex flex-wrap gap-3">
                                     @for($i = 1; $i <= 5; $i++)
                                         <label class="flex items-center">
-                                            <input type="radio" name="social_support" value="{{ $i }}" required class="sr-only" {{ old('social_support', session('social_support')) == $i ? 'checked' : '' }}>
+                                            <input type="radio" name="Stres_Tugas_Deadline" value="{{ $i }}" required class="sr-only" {{ old('Stres_Tugas_Deadline') == $i ? 'checked' : '' }}>
                                             <span class="option-label h-10 w-10 rounded-lg flex items-center justify-center cursor-pointer font-medium">
                                                 {{ $i }}
                                             </span>
@@ -209,8 +209,8 @@
                                     @endfor
                                     <div class="flex-1 flex items-center">
                                         <span class="ml-4 text-sm text-gray-500">
-                                            {{ old('social_support', session('social_support')) ? 'Anda memilih: ' . old('social_support', session('social_support')) : '' }}
-                                            @error('social_support')
+                                            {{ old('Stres_Tugas_Deadline') ? 'Anda memilih: ' . old('Stres_Tugas_Deadline') : '' }}
+                                            @error('Stres_Tugas_Deadline')
                                                 <span class="text-red-500 text-sm ml-2">{{ $message }}</span>
                                             @enderror
                                         </span>
@@ -232,7 +232,7 @@
                                 <div class="flex flex-wrap gap-3">
                                     @for($i = 1; $i <= 5; $i++)
                                         <label class="flex items-center">
-                                            <input type="radio" name="financial_stress" value="{{ $i }}" required class="sr-only" {{ old('financial_stress', session('financial_stress')) == $i ? 'checked' : '' }}>
+                                            <input type="radio" name="Tekanan_Eksternal" value="{{ $i }}" required class="sr-only" {{ old('Tekanan_Eksternal') == $i ? 'checked' : '' }}>
                                             <span class="option-label h-10 w-10 rounded-lg flex items-center justify-center cursor-pointer font-medium">
                                                 {{ $i }}
                                             </span>
@@ -240,8 +240,8 @@
                                     @endfor
                                     <div class="flex-1 flex items-center">
                                         <span class="ml-4 text-sm text-gray-500">
-                                            {{ old('financial_stress', session('financial_stress')) ? 'Anda memilih: ' . old('financial_stress', session('financial_stress')) : '' }}
-                                            @error('financial_stress')
+                                            {{ old('Tekanan_Eksternal') ? 'Anda memilih: ' . old('Tekanan_Eksternal') : '' }}
+                                            @error('Tekanan_Eksternal')
                                                 <span class="text-red-500 text-sm ml-2">{{ $message }}</span>
                                             @enderror
                                         </span>
@@ -263,7 +263,7 @@
                                 <div class="flex flex-wrap gap-3">
                                     @for($i = 1; $i <= 5; $i++)
                                         <label class="flex items-center">
-                                            <input type="radio" name="time_management" value="{{ $i }}" required class="sr-only" {{ old('time_management', session('time_management')) == $i ? 'checked' : '' }}>
+                                            <input type="radio" name="Tekanan_IPK" value="{{ $i }}" required class="sr-only" {{ old('Tekanan_IPK') == $i ? 'checked' : '' }}>
                                             <span class="option-label h-10 w-10 rounded-lg flex items-center justify-center cursor-pointer font-medium">
                                                 {{ $i }}
                                             </span>
@@ -271,8 +271,8 @@
                                     @endfor
                                     <div class="flex-1 flex items-center">
                                         <span class="ml-4 text-sm text-gray-500">
-                                            {{ old('time_management', session('time_management')) ? 'Anda memilih: ' . old('time_management', session('time_management')) : '' }}
-                                            @error('time_management')
+                                            {{ old('Tekanan_IPK') ? 'Anda memilih: ' . old('Tekanan_IPK') : '' }}
+                                            @error('Tekanan_IPK')
                                                 <span class="text-red-500 text-sm ml-2">{{ $message }}</span>
                                             @enderror
                                         </span>
@@ -294,7 +294,7 @@
                                 <div class="flex flex-wrap gap-3">
                                     @for($i = 1; $i <= 5; $i++)
                                         <label class="flex items-center">
-                                            <input type="radio" name="health_condition" value="{{ $i }}" required class="sr-only" {{ old('health_condition', session('health_condition')) == $i ? 'checked' : '' }}>
+                                            <input type="radio" name="Kurang_Kendali" value="{{ $i }}" required class="sr-only" {{ old('Kurang_Kendali') == $i ? 'checked' : '' }}>
                                             <span class="option-label h-10 w-10 rounded-lg flex items-center justify-center cursor-pointer font-medium">
                                                 {{ $i }}
                                             </span>
@@ -302,8 +302,8 @@
                                     @endfor
                                     <div class="flex-1 flex items-center">
                                         <span class="ml-4 text-sm text-gray-500">
-                                            {{ old('health_condition', session('health_condition')) ? 'Anda memilih: ' . old('health_condition', session('health_condition')) : '' }}
-                                            @error('health_condition')
+                                            {{ old('Kurang_Kendali') ? 'Anda memilih: ' . old('Kurang_Kendali') : '' }}
+                                            @error('Kurang_Kendali')
                                                 <span class="text-red-500 text-sm ml-2">{{ $message }}</span>
                                             @enderror
                                         </span>
@@ -325,7 +325,7 @@
                                 <div class="flex flex-wrap gap-3">
                                     @for($i = 1; $i <= 5; $i++)
                                         <label class="flex items-center">
-                                            <input type="radio" name="health_condition_2" value="{{ $i }}" required class="sr-only" {{ old('health_condition_2', session('health_condition_2')) == $i ? 'checked' : '' }}>
+                                            <input type="radio" name="Rasa_Tidak_Sanggup" value="{{ $i }}" required class="sr-only" {{ old('Rasa_Tidak_Sanggup') == $i ? 'checked' : '' }}>
                                             <span class="option-label h-10 w-10 rounded-lg flex items-center justify-center cursor-pointer font-medium">
                                                 {{ $i }}
                                             </span>
@@ -333,8 +333,8 @@
                                     @endfor
                                     <div class="flex-1 flex items-center">
                                         <span class="ml-4 text-sm text-gray-500">
-                                            {{ old('health_condition_2', session('health_condition_2')) ? 'Anda memilih: ' . old('health_condition_2', session('health_condition_2')) : '' }}
-                                            @error('health_condition_2')
+                                            {{ old('Rasa_Tidak_Sanggup') ? 'Anda memilih: ' . old('Rasa_Tidak_Sanggup') : '' }}
+                                            @error('Rasa_Tidak_Sanggup')
                                                 <span class="text-red-500 text-sm ml-2">{{ $message }}</span>
                                             @enderror
                                         </span>
@@ -361,7 +361,7 @@
                                 <div class="flex flex-wrap gap-3">
                                     @for($i = 1; $i <= 5; $i++)
                                         <label class="flex items-center">
-                                            <input type="radio" name="family_issues" value="{{ $i }}" required class="sr-only" {{ old('family_issues', session('family_issues')) == $i ? 'checked' : '' }}>
+                                            <input type="radio" name="Stres_Pribadi" value="{{ $i }}" required class="sr-only" {{ old('Stres_Pribadi') == $i ? 'checked' : '' }}>
                                             <span class="option-label h-10 w-10 rounded-lg flex items-center justify-center cursor-pointer font-medium">
                                                 {{ $i }}
                                             </span>
@@ -369,8 +369,8 @@
                                     @endfor
                                     <div class="flex-1 flex items-center">
                                         <span class="ml-4 text-sm text-gray-500">
-                                            {{ old('family_issues', session('family_issues')) ? 'Anda memilih: ' . old('family_issues', session('family_issues')) : '' }}
-                                            @error('family_issues')
+                                            {{ old('Stres_Pribadi') ? 'Anda memilih: ' . old('Stres_Pribadi') : '' }}
+                                            @error('Stres_Pribadi')
                                                 <span class="text-red-500 text-sm ml-2">{{ $message }}</span>
                                             @enderror
                                         </span>
@@ -392,7 +392,7 @@
                                 <div class="flex flex-wrap gap-3">
                                     @for($i = 1; $i <= 5; $i++)
                                         <label class="flex items-center">
-                                            <input type="radio" name="relationship_status" value="{{ $i }}" required class="sr-only" {{ old('relationship_status', session('relationship_status')) == $i ? 'checked' : '' }}>
+                                            <input type="radio" name="Marah_Eksternal_Studi" value="{{ $i }}" required class="sr-only" {{ old('Marah_Eksternal_Studi') == $i ? 'checked' : '' }}>
                                             <span class="option-label h-10 w-10 rounded-lg flex items-center justify-center cursor-pointer font-medium">
                                                 {{ $i }}
                                             </span>
@@ -400,8 +400,8 @@
                                     @endfor
                                     <div class="flex-1 flex items-center">
                                         <span class="ml-4 text-sm text-gray-500">
-                                            {{ old('relationship_status', session('relationship_status')) ? 'Anda memilih: ' . old('relationship_status', session('relationship_status')) : '' }}
-                                            @error('relationship_status')
+                                            {{ old('Marah_Eksternal_Studi') ? 'Anda memilih: ' . old('Marah_Eksternal_Studi') : '' }}
+                                            @error('Marah_Eksternal_Studi')
                                                 <span class="text-red-500 text-sm ml-2">{{ $message }}</span>
                                             @enderror
                                         </span>
@@ -423,7 +423,7 @@
                                 <div class="flex flex-wrap gap-3">
                                     @for($i = 1; $i <= 5; $i++)
                                         <label class="flex items-center">
-                                            <input type="radio" name="study_environment" value="{{ $i }}" required class="sr-only" {{ old('study_environment', session('study_environment')) == $i ? 'checked' : '' }}>
+                                            <input type="radio" name="Stres_Perubahan_Akademik" value="{{ $i }}" required class="sr-only" {{ old('Stres_Perubahan_Akademik') == $i ? 'checked' : '' }}>
                                             <span class="option-label h-10 w-10 rounded-lg flex items-center justify-center cursor-pointer font-medium">
                                                 {{ $i }}
                                             </span>
@@ -431,8 +431,8 @@
                                     @endfor
                                     <div class="flex-1 flex items-center">
                                         <span class="ml-4 text-sm text-gray-500">
-                                            {{ old('study_environment', session('study_environment')) ? 'Anda memilih: ' . old('study_environment', session('study_environment')) : '' }}
-                                            @error('study_environment')
+                                            {{ old('Stres_Perubahan_Akademik') ? 'Anda memilih: ' . old('Stres_Perubahan_Akademik') : '' }}
+                                            @error('Stres_Perubahan_Akademik')
                                                 <span class="text-red-500 text-sm ml-2">{{ $message }}</span>
                                             @enderror
                                         </span>
@@ -454,7 +454,7 @@
                                 <div class="flex flex-wrap gap-3">
                                     @for($i = 1; $i <= 5; $i++)
                                         <label class="flex items-center">
-                                            <input type="radio" name="future_anxiety" value="{{ $i }}" required class="sr-only" {{ old('future_anxiety', session('future_anxiety')) == $i ? 'checked' : '' }}>
+                                            <input type="radio" name="Cemas_Karir" value="{{ $i }}" required class="sr-only" {{ old('Cemas_Karir') == $i ? 'checked' : '' }}>
                                             <span class="option-label h-10 w-10 rounded-lg flex items-center justify-center cursor-pointer font-medium">
                                                 {{ $i }}
                                             </span>
@@ -462,8 +462,8 @@
                                     @endfor
                                     <div class="flex-1 flex items-center">
                                         <span class="ml-4 text-sm text-gray-500">
-                                            {{ old('future_anxiety', session('future_anxiety')) ? 'Anda memilih: ' . old('future_anxiety', session('future_anxiety')) : '' }}
-                                            @error('future_anxiety')
+                                            {{ old('Cemas_Karir') ? 'Anda memilih: ' . old('Cemas_Karir') : '' }}
+                                            @error('Cemas_Karir')
                                                 <span class="text-red-500 text-sm ml-2">{{ $message }}</span>
                                             @enderror
                                         </span>

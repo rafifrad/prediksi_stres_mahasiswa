@@ -28,7 +28,7 @@
                 <select name="stress_level" class="w-full shadow appearance-none border rounded py-2 px-3 text-gray-700 focus:outline-none focus:border-indigo-500">
                     <option value="">Semua Level</option>
                     <option value="Low" {{ request('stress_level') == 'Low' ? 'selected' : '' }}>Low</option>
-                    <option value="Moderate" {{ request('stress_level') == 'Moderate' ? 'selected' : '' }}>Moderate</option>
+                    <option value="Medium" {{ request('stress_level') == 'Medium' ? 'selected' : '' }}>Medium</option>
                     <option value="High" {{ request('stress_level') == 'High' ? 'selected' : '' }}>High</option>
                 </select>
             </div>
@@ -69,9 +69,9 @@
                                         {{ $prediction->created_at->format('d M Y H:i') }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <span class="px-2 py-1 text-xs font-semibold rounded-full
+                                            <span class="px-2 py-1 text-xs font-semibold rounded-full
                                             @if($prediction->stress_level == 'Low') bg-green-100 text-green-800
-                                            @elseif($prediction->stress_level == 'Moderate') bg-yellow-100 text-yellow-800
+                                            @elseif($prediction->stress_level == 'Medium') bg-yellow-100 text-yellow-800
                                             @else bg-red-100 text-red-800
                                             @endif">
                                             {{ $prediction->stress_level }}

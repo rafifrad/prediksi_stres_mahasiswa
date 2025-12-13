@@ -22,7 +22,6 @@
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tanggal</th>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tingkat Stres</th>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Confidence</th>
-                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Faktor Utama</th>
                                 <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Aksi</th>
                             </tr>
                         </thead>
@@ -35,21 +34,14 @@
                                     <td class="px-6 py-4 whitespace-nowrap">
                                         <span class="px-2 py-1 text-xs font-semibold rounded-full
                                             @if($prediction->stress_level == 'Low') bg-green-100 text-green-800
-                                            @elseif($prediction->stress_level == 'Moderate') bg-yellow-100 text-yellow-800
+                                            @elseif($prediction->stress_level == 'Medium') bg-yellow-100 text-yellow-800
                                             @else bg-red-100 text-red-800
                                             @endif">
                                             {{ $prediction->stress_level }}
                                         </span>
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                                        {{ $prediction->confidence_score }}%
-                                    </td>
-                                    <td class="px-6 py-4 text-sm text-gray-900">
-                                        @if($prediction->stressFactors->count() > 0)
-                                            {{ $prediction->stressFactors->first()->factor_name }}
-                                        @else
-                                            -
-                                        @endif
+                                        {{ number_format($prediction->confidence_score, 2) }}%
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                         <a href="{{ route('prediction.result', $prediction->id) }}" class="text-indigo-600 hover:text-indigo-900">Lihat Detail</a>

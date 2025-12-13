@@ -28,12 +28,12 @@
                 <p class="text-sm text-gray-600 mb-2">Tanggal: {{ $prediction->created_at->format('d M Y H:i') }}</p>
                 <div class="rounded-lg p-6 text-center
                     @if($prediction->stress_level == 'Low') bg-green-50 border-2 border-green-200
-                    @elseif($prediction->stress_level == 'Moderate') bg-yellow-50 border-2 border-yellow-200
+                    @elseif($prediction->stress_level == 'Medium') bg-yellow-50 border-2 border-yellow-200
                     @else bg-red-50 border-2 border-red-200
                     @endif">
                     <h2 class="text-2xl font-bold mb-2
                         @if($prediction->stress_level == 'Low') text-green-800
-                        @elseif($prediction->stress_level == 'Moderate') text-yellow-800
+                        @elseif($prediction->stress_level == 'Medium') text-yellow-800
                         @else text-red-800
                         @endif">
                         Tingkat Stres: {{ $prediction->stress_level }}

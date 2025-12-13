@@ -58,9 +58,9 @@
                                         {{ $prediction->created_at->format('d M Y H:i') }}
                                     </td>
                                     <td class="px-6 py-4 whitespace-nowrap">
-                                        <span class="px-2 py-1 text-xs font-semibold rounded-full
+                                            <span class="px-2 py-1 text-xs font-semibold rounded-full
                                             @if($prediction->stress_level == 'Low') bg-green-100 text-green-800
-                                            @elseif($prediction->stress_level == 'Moderate') bg-yellow-100 text-yellow-800
+                                            @elseif($prediction->stress_level == 'Medium') bg-yellow-100 text-yellow-800
                                             @else bg-red-100 text-red-800
                                             @endif">
                                             {{ $prediction->stress_level }}

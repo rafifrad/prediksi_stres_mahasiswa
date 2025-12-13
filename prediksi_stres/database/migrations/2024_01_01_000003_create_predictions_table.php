@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('predictions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->enum('stress_level', ['Low', 'Moderate', 'High']);
+            $table->enum('stress_level', ['Low', 'Medium', 'High']);
             $table->decimal('confidence_score', 5, 2)->nullable();
             $table->timestamps();
         });
