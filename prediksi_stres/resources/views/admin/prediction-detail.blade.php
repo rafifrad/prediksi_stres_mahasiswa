@@ -64,54 +64,16 @@
             </div>
         @endif
 
-        <!-- Questionnaire Answers -->
-        @if($prediction->questionnaire)
-            <div>
-                <h3 class="text-xl font-semibold text-gray-900 mb-4">Jawaban Kuesioner</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <p class="text-sm text-gray-600">Beban Akademik</p>
-                        <p class="text-lg font-semibold">{{ $prediction->questionnaire->academic_load }}/5</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <p class="text-sm text-gray-600">Jam Tidur</p>
-                        <p class="text-lg font-semibold">{{ $prediction->questionnaire->sleep_hours }} jam</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <p class="text-sm text-gray-600">Dukungan Sosial</p>
-                        <p class="text-lg font-semibold">{{ $prediction->questionnaire->social_support }}/5</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <p class="text-sm text-gray-600">Stres Finansial</p>
-                        <p class="text-lg font-semibold">{{ $prediction->questionnaire->financial_stress }}/5</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <p class="text-sm text-gray-600">Manajemen Waktu</p>
-                        <p class="text-lg font-semibold">{{ $prediction->questionnaire->time_management }}/5</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <p class="text-sm text-gray-600">Kondisi Kesehatan</p>
-                        <p class="text-lg font-semibold">{{ $prediction->questionnaire->health_condition }}/5</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <p class="text-sm text-gray-600">Masalah Keluarga</p>
-                        <p class="text-lg font-semibold">{{ $prediction->questionnaire->family_issues }}/5</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <p class="text-sm text-gray-600">Status Hubungan</p>
-                        <p class="text-lg font-semibold">{{ $prediction->questionnaire->relationship_status }}/5</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <p class="text-sm text-gray-600">Lingkungan Belajar</p>
-                        <p class="text-lg font-semibold">{{ $prediction->questionnaire->study_environment }}/5</p>
-                    </div>
-                    <div class="bg-gray-50 rounded-lg p-4">
-                        <p class="text-sm text-gray-600">Kecemasan Masa Depan</p>
-                        <p class="text-lg font-semibold">{{ $prediction->questionnaire->future_anxiety }}/5</p>
-                    </div>
-                </div>
+        <!-- Additional Information -->
+        <div class="mt-8">
+            <h3 class="text-xl font-semibold text-gray-900 mb-4">Informasi Tambahan</h3>
+            <div class="bg-gray-50 rounded-lg p-6">
+                <p class="text-gray-700">
+                    Analisis faktor stres ini didasarkan pada data yang dikumpulkan dari survei yang diisi oleh mahasiswa.
+                    Setiap faktor memiliki tingkat kepentingan yang berbeda dalam mempengaruhi tingkat stres.
+                </p>
             </div>
-        @endif
+        </div>
     </div>
 </div>
 @endsection

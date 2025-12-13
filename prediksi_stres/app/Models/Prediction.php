@@ -5,7 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Prediction extends Model
@@ -27,14 +26,13 @@ class Prediction extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function questionnaire(): HasOne
-    {
-        return $this->hasOne(Questionnaire::class);
-    }
-
     public function stressFactors(): HasMany
     {
         return $this->hasMany(StressFactor::class)->orderBy('rank');
     }
-}
 
+    public function academicStressSurvey()
+    {
+        return $this->hasOne(AcademicStressSurvey::class);
+    }
+}

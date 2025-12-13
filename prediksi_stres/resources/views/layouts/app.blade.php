@@ -6,6 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'Prediksi Stres Mahasiswa')</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @stack('styles')
     <!-- SweetAlert2 -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
@@ -92,6 +93,9 @@
 
         @yield('content')
     </main>
+    
+    <!-- Scripts -->
+    @stack('scripts')
 </body>
 </html>
 

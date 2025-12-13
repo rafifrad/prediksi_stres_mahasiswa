@@ -10,6 +10,11 @@ class StressFactor extends Model
 {
     use HasFactory;
 
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
     protected $fillable = [
         'prediction_id',
         'factor_name',
@@ -17,13 +22,21 @@ class StressFactor extends Model
         'rank',
     ];
 
+    /**
+     * The attributes that should be cast.
+     *
+     * @var array<string, string>
+     */
     protected $casts = [
         'importance_score' => 'decimal:2',
+        'rank' => 'integer',
     ];
 
+    /**
+     * Get the prediction that owns the stress factor.
+     */
     public function prediction(): BelongsTo
     {
         return $this->belongsTo(Prediction::class);
     }
 }
-

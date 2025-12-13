@@ -65,10 +65,7 @@
                 </div>
             @else
                 <div class="text-center py-8">
-                    <p class="text-gray-500 mb-4">Belum ada prediksi. Mulai dengan mengisi kuesioner!</p>
-                    <a href="{{ route('questionnaire') }}" class="inline-block bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700">
-                        Isi Kuesioner
-                    </a>
+                    <p class="text-gray-500 mb-4">Belum ada prediksi yang tersedia.</p>
                 </div>
             @endif
         </div>

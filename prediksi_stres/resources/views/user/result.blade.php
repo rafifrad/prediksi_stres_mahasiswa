@@ -47,36 +47,6 @@
             </div>
         </div>
 
-        <!-- Questionnaire Summary -->
-        <div class="mb-8">
-            <h3 class="text-xl font-semibold text-gray-900 mb-4">Ringkasan Jawaban Kuesioner</h3>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="bg-gray-50 rounded-lg p-4">
-                    <p class="text-sm text-gray-600">Beban Akademik</p>
-                    <p class="text-lg font-semibold">{{ $prediction->questionnaire->academic_load }}/5</p>
-                </div>
-                <div class="bg-gray-50 rounded-lg p-4">
-                    <p class="text-sm text-gray-600">Jam Tidur</p>
-                    <p class="text-lg font-semibold">{{ $prediction->questionnaire->sleep_hours }} jam</p>
-                </div>
-                <div class="bg-gray-50 rounded-lg p-4">
-                    <p class="text-sm text-gray-600">Dukungan Sosial</p>
-                    <p class="text-lg font-semibold">{{ $prediction->questionnaire->social_support }}/5</p>
-                </div>
-                <div class="bg-gray-50 rounded-lg p-4">
-                    <p class="text-sm text-gray-600">Stres Finansial</p>
-                    <p class="text-lg font-semibold">{{ $prediction->questionnaire->financial_stress }}/5</p>
-                </div>
-                <div class="bg-gray-50 rounded-lg p-4">
-                    <p class="text-sm text-gray-600">Manajemen Waktu</p>
-                    <p class="text-lg font-semibold">{{ $prediction->questionnaire->time_management }}/5</p>
-                </div>
-                <div class="bg-gray-50 rounded-lg p-4">
-                    <p class="text-sm text-gray-600">Kondisi Kesehatan</p>
-                    <p class="text-lg font-semibold">{{ $prediction->questionnaire->health_condition }}/5</p>
-                </div>
-            </div>
-        </div>
 
         <!-- Recommendations -->
         <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
